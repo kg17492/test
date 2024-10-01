@@ -2,14 +2,14 @@ name: Test
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
   test:
     runs-on: mac-latest
     steps:
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v4
       - name: Run a multi-line script
         run: |
           python -c import opensees
